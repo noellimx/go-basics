@@ -2,43 +2,41 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"time"
 )
 
 func main() {
-	done := make(chan struct{})
+	done := make(chan string)
 	now := time.Now()
 	go task1(done)
 	go task2(done)
 	go task3(done)
 	go task4(done)
 
-	<-done
-	<-done
-	<-done
-	<-done
+	log.Println(<-done)
+	log.Println(<-done)
+	log.Println(<-done)
+	log.Println(<-done)
+
 	fmt.Println("elapsed:", time.Since(now))
 }
 
-func task1(done chan struct{}) {
+func task1(done chan string) {
 	time.Sleep(100 * time.Millisecond)
-	fmt.Println("task1")
-	done <- struct{}{}
+	done <- "task1"
 }
 
-func task2(done chan struct{}) {
+func task2(done chan string) {
 	time.Sleep(200 * time.Millisecond)
-	fmt.Println("task2")
-	done <- struct{}{}
+	done <- "task2"
 }
 
-func task3(done chan struct{}) {
-	fmt.Println("task3")
-	done <- struct{}{}
+func task3(done chan string) {
+	done <- "task3"
 }
 
-func task4(done chan struct{}) {
+func task4(done chan string) {
 	time.Sleep(100 * time.Millisecond)
-	fmt.Println("task4")
-	done <- struct{}{}
+	done <- "task4"
 }

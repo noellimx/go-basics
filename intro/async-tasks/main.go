@@ -6,8 +6,10 @@ import (
 )
 
 func main() {
-	//asyncNotWorking()
-	asyncTmpFix()
+	asyncNotWorking()
+	// asyncTmpFix()
+
+	fmt.Println("exit")
 }
 
 func asyncNotWorking() {
@@ -33,13 +35,16 @@ func asyncTmpFix() {
 	time.Sleep(time.Second)
 }
 
+var short = 100 * time.Millisecond
+var long = short * 2
+
 func task1() {
-	time.Sleep(100 * time.Millisecond)
+	time.Sleep(short)
 	fmt.Println("task 1")
 }
 
 func task2() {
-	time.Sleep(200 * time.Millisecond)
+	time.Sleep(long)
 	fmt.Println("task 2")
 }
 
@@ -48,6 +53,6 @@ func task3() {
 }
 
 func task4() {
-	time.Sleep(100 * time.Millisecond)
+	time.Sleep(short)
 	fmt.Println("task 4")
 }

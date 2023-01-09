@@ -10,9 +10,18 @@ func main() {
 	now := time.Now()
 	var wg sync.WaitGroup
 	wg.Add(1)
+	wg.Add(1)
 	go func() {
+		fmt.Println("elapsed:", time.Since(now))
+
 		defer wg.Done()
 		work()
+		go func() {
+			fmt.Println("elapsed:", time.Since(now))
+
+			defer wg.Done()
+			work()
+		}()
 	}()
 
 	wg.Wait()

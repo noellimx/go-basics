@@ -1,6 +1,6 @@
 ### Coding Examples
 
-[ ] [Introduction to Concurrency](https://github.com/golang-basics/concurrency/tree/master/intro)
+[x] [Introduction to Concurrency](https://github.com/golang-basics/concurrency/tree/master/intro)
 
 [ ] [Go Routines](https://github.com/golang-basics/concurrency/tree/master/go-routines)
 

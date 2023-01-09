@@ -9,9 +9,10 @@ func main() {
 	now := time.Now()
 	done := make(chan struct{})
 	go func() {
-		work()
+		// work()
 		done <- struct{}{}
 	}()
+	fmt.Println("elapsed:", time.Since(now))
 
 	<-done
 	fmt.Println("elapsed:", time.Since(now))
