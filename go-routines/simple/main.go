@@ -1,21 +1,25 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"time"
 )
 
 func main() {
-	go longTask()
-	immediateTask()
-	time.Sleep(time.Second)
+	t1 := time.Now()
+	for i := 1; i < 5; i++ {
+		ms := time.Duration(i) * 100
+		immediateTask(ms)
+	}
+	time.Sleep(6)
+
+	t2 := time.Now()
+	log.Printf("time elapsed%s", t2.Sub(t1))
+
 }
 
-func immediateTask() {
-	fmt.Println("I executed immediately")
-}
+func immediateTask(ms time.Duration) {
 
-func longTask() {
-	time.Sleep(500 * time.Millisecond)
-	fmt.Println("I executed after 500ms")
+	time.Sleep(ms)
+	log.Printf("%v", ms)
 }
