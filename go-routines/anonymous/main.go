@@ -6,13 +6,17 @@ import (
 )
 
 func main() {
-	go worker()
-	go func() {
-		fmt.Println("print in anonymous function")
-	}()
+	for i := 10; i > 0; i-- {
+
+		go worker(i)
+		go func(_i int) {
+			fmt.Printf("anon %d \n", _i)
+		}(i)
+
+	}
 	time.Sleep(time.Second)
 }
 
-func worker() {
-	fmt.Println("print in worker function")
+func worker(i int) {
+	fmt.Printf("print in worker function %d \n", i)
 }

@@ -3,7 +3,7 @@
 ### Examples
 
 [x] [Simple Example](https://github.com/golang-basics/concurrency/blob/master/go-routines/simple/main.go)
-- [Anonymous](https://github.com/golang-basics/concurrency/blob/master/go-routines/anonymous/main.go)
+[x] [Anonymous](https://github.com/golang-basics/concurrency/blob/master/go-routines/anonymous/main.go)
 - [Closures - Anonymous vs Named](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/anonymous-vs-named/main.go)
 - [Closures - Passed by Value](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/passed-by-value/main.go)
 - [Closures - Loops](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/loops/main.go)
