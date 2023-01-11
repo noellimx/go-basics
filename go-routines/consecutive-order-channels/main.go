@@ -1,34 +1,34 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"time"
 )
 
+type STRUCT = string
+
 func main() {
-	done := make(chan struct{})
+	done := make(chan STRUCT)
 	go task1(done)
-	<-done
+	log.Printf(<-done)
 	go task2(done)
-	<-done
+	log.Printf(<-done)
 	go task3(done)
-	<-done
+	log.Printf(<-done)
+
 }
 
-func task1(done chan struct{}) {
+func task1(done chan STRUCT) {
 	time.Sleep(100 * time.Millisecond)
-	fmt.Println("task 1")
-	done <- struct{}{}
+	done <- "task1 - 100ms"
 }
 
-func task2(done chan struct{}) {
+func task2(done chan STRUCT) {
 	time.Sleep(50 * time.Millisecond)
-	fmt.Println("task 2")
-	done <- struct{}{}
+	done <- "task2 - 50"
 }
 
-func task3(done chan struct{}) {
+func task3(done chan STRUCT) {
 	time.Sleep(10 * time.Millisecond)
-	fmt.Println("task 3")
-	done <- struct{}{}
+	done <- "task3 - 10ms"
 }
