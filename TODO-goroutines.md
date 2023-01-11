@@ -6,7 +6,7 @@
 
 [x] [Anonymous](https://github.com/golang-basics/concurrency/blob/master/go-routines/anonymous/main.go)
 
-- [Closures - Anonymous vs Named](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/anonymous-vs-named/main.go)
+[x] [Closures - Anonymous vs Named](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/anonymous-vs-named/main.go)
 
     ```txt
     2023/01/11 11:07:38 [namedClosures] time elapsed 28131459

@@ -9,13 +9,13 @@ type person struct {
 func main() {
 	n := 10
 	if n := ten(); n == 10 {
-		fmt.Println("we got ten")
-		n = 11
+		fmt.Println("we got n=10 from branch scope")
+		n = 11 // shadowed
 	}
-	fmt.Println("n", n)
+	fmt.Printf("n %d", n)
 	tryToUpdateByValue()
-	//tryToUpdateByIndex()
-	//tryToUpdateByReference()
+	tryToUpdateByIndex()
+	tryToUpdateByReference()
 }
 
 func tryToUpdateByValue() {
@@ -26,13 +26,12 @@ func tryToUpdateByValue() {
 		{name: "Steve"},
 	}
 
-	fmt.Println("trying to update people names")
 	for _, p := range people {
 		fmt.Println(p.name)
 		p.name = "Anonymous"
 	}
 
-	fmt.Println("checking if people names were updates")
+	fmt.Println("[tryToUpdateByValue] checking if people names were updates")
 	for _, p := range people {
 		fmt.Println(p.name)
 	}
@@ -46,13 +45,12 @@ func tryToUpdateByIndex() {
 		{name: "Steve"},
 	}
 
-	fmt.Println("trying to update people names")
 	for i, p := range people {
 		fmt.Println(p.name)
 		people[i].name = "Anonymous"
 	}
 
-	fmt.Println("checking if people names were updates")
+	fmt.Println("[tryToUpdateByIndex] checking if people names were updates")
 	for _, p := range people {
 		fmt.Println(p.name)
 	}
@@ -66,13 +64,12 @@ func tryToUpdateByReference() {
 		{name: "Steve"},
 	}
 
-	fmt.Println("trying to update people names")
 	for _, p := range people {
 		fmt.Println(p.name)
 		p.name = "Anonymous"
 	}
 
-	fmt.Println("checking if people names were updates")
+	fmt.Println("[tryToUpdateByReference] checking if people names were updates")
 	for _, p := range people {
 		fmt.Println(p.name)
 	}
