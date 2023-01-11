@@ -13,8 +13,10 @@
     2023/01/11 11:07:38 [anonymousClosures] time elapsed 4963500
     ```
 
-- [Closures - Passed by Value](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/passed-by-value/main.go)
-- [Closures - Loops](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/loops/main.go)
+[x] [Closures - Passed by Value](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/passed-by-value/main.go)
+
+[x] [Closures - Loops](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/loops/main.go)
+
 - [Consecutive Order - Channels](https://github.com/golang-basics/concurrency/blob/master/go-routines/consecutive-order-channels/main.go)
 - [Consecutive Order - Wait Groups](https://github.com/golang-basics/concurrency/blob/master/go-routines/consecutive-order-waitgroups/main.go)
 - [Pure Concurrency](https://github.com/golang-basics/concurrency/blob/master/go-routines/pure-concurrency/main.go)
