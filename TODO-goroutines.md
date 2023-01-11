@@ -17,8 +17,8 @@
 
 [x] [Closures - Loops](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/loops/main.go)
 
-- [Consecutive Order - Channels](https://github.com/golang-basics/concurrency/blob/master/go-routines/consecutive-order-channels/main.go)
-- [Consecutive Order - Wait Groups](https://github.com/golang-basics/concurrency/blob/master/go-routines/consecutive-order-waitgroups/main.go)
+[x] [Consecutive Order - Channels](https://github.com/golang-basics/concurrency/blob/master/go-routines/consecutive-order-channels/main.go)
+[x] [Consecutive Order - Wait Groups](https://github.com/golang-basics/concurrency/blob/master/go-routines/consecutive-order-waitgroups/main.go)
 - [Pure Concurrency](https://github.com/golang-basics/concurrency/blob/master/go-routines/pure-concurrency/main.go)
 - [Context Switch - Benchmark](https://github.com/golang-basics/concurrency/blob/master/go-routines/ctxswitch/ctxswitch_test.go)
 - [Stack Size](https://github.com/golang-basics/concurrency/blob/master/go-routines/stack-size/main.go)
