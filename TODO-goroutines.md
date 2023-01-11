@@ -3,8 +3,16 @@
 ### Examples
 
 [x] [Simple Example](https://github.com/golang-basics/concurrency/blob/master/go-routines/simple/main.go)
+
 [x] [Anonymous](https://github.com/golang-basics/concurrency/blob/master/go-routines/anonymous/main.go)
+
 - [Closures - Anonymous vs Named](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/anonymous-vs-named/main.go)
+
+    ```txt
+    2023/01/11 11:07:38 [namedClosures] time elapsed 28131459
+    2023/01/11 11:07:38 [anonymousClosures] time elapsed 4963500
+    ```
+
 - [Closures - Passed by Value](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/passed-by-value/main.go)
 - [Closures - Loops](https://github.com/golang-basics/concurrency/blob/master/go-routines/closures/loops/main.go)
 - [Consecutive Order - Channels](https://github.com/golang-basics/concurrency/blob/master/go-routines/consecutive-order-channels/main.go)
